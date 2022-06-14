@@ -21,3 +21,20 @@ Rough draft of checklist:
   Data Security Addendedum - sets forth the terms and conditions pursuant to which Sensitive University Data 
   will be protected by the Selected Firm/Vendor during the term of the Parties' Contract and after its termination.
   Road map - align to NYU's Roadmap/business needs - Armondo
+  
+Personally Identifiable Information, or PII, is a general term that is used to describe any form of sensitive data that could be used 
+to identify or contact an individual. 
+This term is not related to HIPAA and is not regulated by any one entity or in any one industry like PHI is. 
+
+Protected Health Information, or PHI, is any medical information that can potentially identify an individual, that was created, 
+used or disclosed in the course of providing healthcare services, whether it was a diagnosis or treatment.  
+
+PHI can include information about: 
+
+The past, present, or future physical health or condition of an individual 
+Healthcare services rendered to an individual 
+Past, present, or future payment for the healthcare services rendered to an individual, along with any of the identifiers shown below. 
+
+The HIPAA Privacy Rule defines 18 identifiers that make health information PHI under HIPAA:
+
+https://healthitsecurity.com/news/key-differences-between-phi-and-pii-how-they-impact-hipaa-compliance#:~:text=Protected%20health%20information%20is%20a,future%20physical%20or%20mental%20health.
