@@ -1,0 +1,111 @@
+## incident response - the cyber team
+
+intro to cyber team:
+- focus: cyber threat intel, incident response
+	- first one to respond when something is happening in the environment
+	- primary job #1: IR, if something is happening we drop everything and respond
+	- day-to-day : 
+		- can be benign: lost device
+		- can be severe: ransomware, outage calls
+	- log4j, wannacry, notpetaya - team dealt with these
+- have a process and playbook
+	- playbook: categorization of all  types of incidents
+		- steps for each type of incident
+		- not an operations guide - so many tools/platforms, cant cover every little thing
+		- goal is for analyst to know what to do in that category
+- lots of technologies:
+	- high level: anomali, splunk, crowdstrike
+- investigations: part of team's responsibility
+	- driven by legal/HR
+	- incidents come from ciso (hai), will have to do events+investigations
+- daily touch point call:
+	- needed for collaborating/communicating w off hours resources 
+
+working with jorge and fred:
+- zerofox and threat resources
+- fred: ir process and playbook, steven will share docs
+	- steven wants some feedback on this
+
+- there will be downtime/personal time
+- sometimes it will be hard to do interrupted work with the analysts
+- steven will add us to distribution list, watch alerts
+
+usual routine:
+- nothing new
+- jorge is working on XDR
+
+research:
+- research XDR - is it really innovative or just marketing?
+- one of the hottest things right now (with zerotrust)
+- no vendor - cisco, palo alto, arrista
+	- dont focus on that, more on "what are the benefits?"
+	- jorge and steven and working on the "depth and breadth" of the cyber team to figure out how they can depict a hollistic view of what the team does - "are we already doing what xdr does?" - if so, they will pitch that to management
+
+stevens conference:
+- 2nd in command attorney general was there, had a lot of security
+- steven learned theres lots of stuff they have to give up to be in the fbi
+
+steven usually goes into office mon-thurs
+- other guys rotate
+
+## Jorges intro meeting
+
+- jorge will setup training session with anomali and zerofox
+
+threat intel program:
+- help develop playbook as we work through this rotation
+- framework - living document, driven by threat landscape
+	- ransomware - recently became a part of landscape - biggest threat to healthcare
+	- lot of things seen now werent seen 10 y ago
+	- hacking started w telecoms, created exploit kits
+- as actors shift, defenders have to shift with them
+- intel programs need actionable info
+	- dissemination has to lead to defensive measures
+		- can be organizational , ie. russia-ukraine conflict was nation states, became an alert
+	- technical IoCs: team takes the indicators and put into platforms (ie anomali)
+	- evens info flows into IR
+- lots of processes with stakeholders like vuln mgmt, policy
+- intel lifecycle
+	- collection
+	- analysis
+	- dissemination
+	- MITRE ATT&CK mapping
+- threat intel platform (TIP)
+	- anomali
+	- feedly - can make free accts
+	- crowdstrike - detection/response, nextgen AV
+- open source
+	- virustotal - drop files, domains, searches
+	- alienvault - 
+- zerofox
+	- domain / impersonation takedowns
+	- compromised credentials - darkweb monitoring
+
+## Incident Response
+
+ir process document:
+- its a living document
+- read thru it
+
+crowdstrike:
+- detection section: what was run (script)
+	- deepblue - forensics tool, powershell; crowdstrike ML picked up as malicious and blocked
+- example: user got a file w password in an email
+	- fred looked at machine in crowdstrike
+	- took file from email and put in malware analytics (cisco tool - takes sample or url, opens in sandbox, analyzes)
+	- reached out to user and said its malicious, had user shutdown device and desktop support reimage device
+
+proofpoint:
+- can search user emails, check hashes
+- decode urls so users cant click to go directly to a link
+
+cylance:
+- dont use a lot
+- older, non-standard devices that cant use crowdstrike
+
+stealthwatch
+- search ip, can see all traffic flows between machine and office
+- can categorize potential traffic category
+- can search network flows for specific traffic
+
+fred's rec: undeclared war - about england cyber dept
