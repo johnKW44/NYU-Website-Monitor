@@ -1,1 +1,220 @@
+Policies:
+ITP-04: Network Security
+Network Security Controls requirements for implementing/maintaining security of NYULH network, incl access, connectivity/mgmt, mechanisms to identify/prevent abuse.minimize risk and promote process integrity
 
+steps should be taken to maintain CIA of NYULH confidential and protected information
+MCIT to prevent malware/dangerous activities, protect against institutional data loss, protect IT service/information integrity, implement solutions/services w.o dirupting business and minimizing intrusiveness, avoid moral judgment on user behavior, control assignment of every IP address on NYULH network
+all external network connections must go through authorized gateway/firewall that is routinely documented, managed, reviewed, pentested
+changes to network shall follow change mgmt process
+certain services/facilities to be placed in DMZ or isolated appropriatley
+business-driven rules should be implemented by NYU team to protect CIA of data
+devices connecting to network require security checks, those not meeting requirements are not allowed access
+"Distinct Network Zones" created based on user characterstics/location/security posture
+access/connectivity for each zone implemented+authorized by NYU Langone IT Governance Entities
+zone access guidelines (ITP-04-02) to be maintained by MCIT Info Sec team
+traffic-flow rules/configs to be documented and implemented for each network zone
+network access (except guest access) provided+audited based on unique user IDs according to ITP-05 (Access Mgmt Policy)
+security alerts/vuln notices/patches/etc to be reviewed+implemented according to ITP-18 (Vuln and Sec Patch Mgmt) and ITP-23 (Antivirus Policy)
+netmon logs/alarms/indicators to be routinely reviewed according to ITP-16 (Logging/Monitoring Policy)
+malicious/non-compliant use of information assets to be monitored manually+automatically
+remove unncessary protocls, default passwords, standard authentication mechanisms and restrict mgmt ports to authorized locations when installing network devices/systems
+always maintain reilience for NYU Langone network Remote Access:
+automatically grant remote access services/apps to employees+non-compensated faculty at @NYULMC portal that is consistent with their job functions
+nyu faculty outside of SoM grated access upon request
+non-employees/non-compensated faculty/students not automatically granted remote access to @NYULMC. can be requested and granted for 1 year period. requests for addtl access may be required (different from internal requests)
+employees (incl Howard Hughes Inst.-funded or non-compensated faculty) must request remote access for others requiring access
+enterprise data retrieved via remote access subject to ITP-03 (Desktop, Mobile Device, Electronic Media Controls Policy)
+NYULangone remote access/apps to be auto-disconnected after a period of inactivity, require re-auth to continue
+ITP-06: Password Management
+requirements for creation, usage, mgmt of passwords for NYULH Information Assets
+
+ITP-06-01 Password Management Standards:
+Account lock-outs after multiple incorrectly entered passwords, user required to contact MCIT helpdesk to regain access
+periodic password expiration
+automatically disconnect users from remote access after period of inactivity, require re-auth to continue use
+enforce minimum password complexity
+enforce strong passwords
+centralized auth for all Information Assets - MCIT AD or LDAP
+only deploy systems/3rd party services that can auth using NYU Langone auth/userID standards
+enable users to change own passwords
+never transmit passwords in clear text
+encrypt or hash stored passwords or restrict access to admins if encryption/hashing not possible
+system-level passwords (root/NT Admin/app admin accts) must be changed when IT admin employment is terminated
+vendor-supplied passwords must be changed on first use
+when incorrect password is entered, systems/apps must not provide info regarding log-on attempt
+2-factor auth must be used for high risk devices if available
+ITP-11: Security Incident Response
+requirements+processes for reporting and responding to NYULH security incidents, creating and testing security incident response plan
+
+Security Incident Response Team (SIRT) responds to and documents incidents and annually tests response plan. data from incidents to be kept according to record management policy
+annual testing and incident response should be reviewed and analyzed to identify and address security gaps for learning and to improve security controls
+incident response test plan and results to be maintained by MCIT security team for 24 months
+ITP-23:
+Policy Purpose
+
+The purpose of this Policy is to outline expectations regarding necessary antivirus software installation, configuration and maintenance to safeguard Information Assets from malware threats to protect the privacy, availability, integrity, and confidentiality of NYU Langone Health (“NYU Langone”) Information Assets (including the Enterprise Data that resides therein).
+
+Policy
+
+All Information Assets and non-NYU Langone Information Assets accessing Information Assets must have standard NYU Langone approved antivirus software installed and running with the latest updates which must be configured to enable, at a minimum: 1.1. Daily virus definition updates 1.2. Real-time scanning 1.3. Weekly full-system scan
+NYU Langone shall have the right to install technology on any device, NYU Langone owned or not, that accesses Information Assets in order to monitor device antivirus compliance; NYU Langone can deny access to out-of-compliance devices.
+ITP-24:
+The purpose of this standard is to set requirements for the storage, handling and transfer of NYU Langone Health Protected Information. Protected Information is any electronic information that the NYU Langone Health creates, receives, maintains, or transmits that is subject to any federal, state or local privacy or security law or regulation, including but not limited to personally identifiable information, protected health information and credit card information.
+
+Standards
+
+Protected Information shall be exchanged and stored in a secure manner.
+
+Protected Information must be protected from unintended access by unauthorized users. Users must guard against unauthorized viewing of Protected Information which is displayed on the user’s computer screen. Users must not leave Protected Information unattended and accessible.
+
+Protected Information must not be transferred by any method to persons who are not authorized to access that information.
+
+Physical protection must be employed for all devices storing Protected Information. This shall include physical access controls that limit physical access and viewing, if open to public view. Any easily transportable devices should be secured in locked cabinets or drawers.
+
+Encryption of Protected Data must comply with ITP-10-01 Encryption Standards. Protected Information must always be encrypted in transmission.
+
+All NYU Langone Health’s Workforce Members with access to Protected Information must receive training with regard to the NYU Langone Health’s policies and procedures dealing with Protected Information.
+
+Standards:
+ITP-02-01
+The purpose of the Email Standards document is to communicate details, criteria and guidance surrounding NYU Langone Health email accounts, including items such as email lists, forwards, attachments, Workforce Member termination, etc.
+
+This standard applies to anyone using an NYU Langone Health email account and the NYU Langone Health email system managed by MCIT.
+
+MCIT reserves the right to suspend accounts, subscribers access and/or delete mailing lists that: (1) are misused; (2) do not comply with established standards and policies; (3) pose a threat to system security or integrity.
+
+Acct ID and Authentication: naming conventions and password protection standards
+Disclaimer: system-configured disclaimer text appended to all outgoing email
+Acct Privacy: MCIT may monitor/copy/disclose info on email system for investigations, law enforcement, judicial requests, or emergency security/network maintenance
+Storage: based on user but standard is 10GB, when mailbox reaches 90% capacity an alert is sent to user, when mailbox reaches 95% the user may not send new messages, when mailbox reaches 100% the team is alerted to follow up with user
+Shared Mailboxes: for dept use only; outgoing messages use mailbox name as sender, only dept heads can create, must be re-approved annually
+Attachments: unsafe filetypes (.exe, .com, etc) are blocked on both in/out, inbound messages >25MB have attachments stripped, outbound messages >25MB will be alerted and not send unless filesize is <25MB
+Lists: only used for official announcements or messages distributed to >250 recipients, new lists can be requsted thru MCIT services and must have an owner who revalidates the list annually, sponsored users/users w.o a Kerberos ID may not be list owners, lists with >250 recipients must be authorized by a VP, Dept chair, or higher; lists with >3000 require approval of comms dept, query-based lists >250 must be moderated by up to 10 users, MCIT will disable unused lists/lists with an invalid email owner, lists cannot receive external email unless requested, MCIT may suspend accts/subscribers list access, list archive access must be authenticated
+Forwarding: only allowed for non-NYULH addresses if requested and approved, sensitive data must be encrypted when forwarding, forwarded emails retained by original NYULH address
+Retention/Deletion: emails are moved after 1 yr to an archived mailbox, standards for "deleted or trash folder" , all emails are maintained for 7 days for legal reasons
+Termination: email accts disabled upon worker termination with a 30-day grace period for receiving (no sending) and 90-day period for mailbox deletion, terminated email may be held for 7 years for legal reasons, terminated emails removed from all lists, custom out-of-office message may be placed on email after review and approval, depts may approve access to terminated email for business continuity - restricted to read-only for 90 days before deletion, MCIT can produce archived emails/mailbox for terminated workers if requested and approved by supervisor/manager
+ITP-04-01
+Firewalls are designed to regulate computer traffic between networks that have different trust levels. When used in conjunction with other security solutions, they can help prevent unauthorized access to resources. This document defines the minimum standards to be followed when implementing firewalls within the NYU Langone Health environment. It does not recommend or suggest specific hardware or software products.
+
+Implementation Standards
+
+Access Control
+
+Capacity Planning/Fault Tolerance
+
+Default Settings
+
+Documents and Procedures
+
+Implementation and Rule Base
+
+Logging and Monitoring
+
+Security Settings • Protection against IP spoofing should be enabled. • Protection against Syn Floods should be enabled. • Protection against Denial of Service should be enabled. • Intrusion detection/prevention should be enabled and updated regularly. • Invalid or malformed packets should be blocked. • Firewalls should “fail closed”. • Firewalls should be configured with stateful inspection.
+
+Internet Access Internet Access is governed by the NYU Langone Health Network Internet Access Standard and SCHEDULE A NYU Langone Health Network Internet Access Standard.
+
+Exceptions
+
+Where it is not possible to comply with any particular control, an exception must be obtained from MCIT Security. Exceptions must be supported by a comprehensive and detailed justification from the party requesting the exception. The merits of all exceptions will be considered on a case-by-case basis. Please see the NYU Langone Health IT Exception Standard for more information.
+
+Roles and Responsibilities
+
+MCIT Network Security: the firewall should be managed by designated teams within the Network Security organization. The responsibilities include administering, supporting, and monitoring the firewalls. In the event the firewall is software based, the team will only be responsible for the maintenance of the firewall software. Support of that host it resides on will be provided by the team that manages that type of host.
+
+MCIT Security: Exceptions to the standards defined in this document must be approved by the MCIT Security team. The team is also responsible for reviewing the standards and updating the document as needed. Firewall rules and configurations are to be reviewed for compliance to MCIT policy and standards.
+
+ITP-10-01
+This document outlines the appropriate standards for encryption at NYU Langone Health to ensure that Protected and Confidential Information within and transmitted out of NYU Langone Health cannot be viewed, modified, or otherwise discovered by unauthorized parties in the event of theft, loss or interception. Additionally, this document outlines encryption standards that help NYU Langone Health to maintain compliance with industry and governmental regulations.
+
+Standards
+
+Advanced Encryption Standard (AES) as defined in the United States National Institute of Standards and Technology (NIST) publication FIPS 140-2, or any superseding documents according to the date of implementation must be used for symmetric encryption.
+
+NYU Langone Health must implement encryption key lengths of AES 256 bits or greater where possible. Specific encryption key strength is specified in the table below.
+
+A minimum of 2048 bit encryption is required for any data encrypted using asymmetric systems (e.g. a public/private key pair for encrypting/decrypting the information); this encryption must meet the standards defined for use in NIST publication FIPS 140-2 or any superseding document, according to date of implementation.
+
+Mobile Devices (portable computing devices that are designed for use in transit, including, but not limited to, laptops, smartphones and tablets) must be encrypted in the following ways:
+
+a) NYU Langone Health mobile devices must be encrypted unless a specific exception has been made. Mobile devices that cannot be encrypted due to valid business justifications must be approved as an exception MCIT Security.
+
+b) All personal mobile devices with direct access to NYU Langone Health email must be encrypted (this does not include access to webmail or network desktop).
+
+Protected Information must always be encrypted in transmission.
+
+Cryptographic keys must be generated and stored in a secure manner that prevents loss, theft, or compromise.
+
+NYU Langone Health requires all encryption keys to be registered with the key custodian to enable decryption in the event of staff termination or emergency. Key management shall be deployed at a level commensurate with the critical function that these keys serve.
+
+End points must be authenticated and validated prior to the exchange or derivation of session keys.
+
+All servers used for authentication or containing protected information must utilize SSL or TLS and have installed a valid certificate signed by a trusted MCIT-approved CA (Digicert is the approved external CA; Microsoft PKI is the approved internal CA). Self-signed certificates are not acceptable.
+
+Digital certificates issued will be valid for a period no greater than 825 days (27 months, or just over 2 years), unless compromise has been detected or suspected, whereupon the certificate will be immediately revoked by MCIT.
+
+Cloud service encryption keys must be accessible only by a restricted group of administrators. All access to encryption keys must be monitored and logged. Where available, encryption keys should be held by MCIT.
+
+Details on encryption standards can be found below: Data at Rest Stored passwords/One-way hash-function/SHA-2 or better
+
+Database with Protected Information/Implement with vendor provided encryption solutions/AES 256 bit or better
+
+Mobile Devices(e.g., Smartphones, Tablets,Laptops, External hard drive,USB drives, etc.)/Iron Key is the only approved USB drive for transport of NYU Langone Health data/AES 256 bit or better
+
+Desktops with Protected Information/Full disk encryption where possible./AES 256 bit or better
+
+Network Access Storage (NAS)with Protected Information/Implement with vendor specific capabilities/AES 256 bit or better
+
+Data in the Cloud/Implement with vendor provided encryption solutions. Two layers of security preferred: Key Encryption Key (KEK)/PKCS 2048 with AES 256 bit or better
+
+Data in Transit
+
+Web traffic across public and internal networks/HTTPS/TLS 1.2 or better
+
+Bulk data transfer across public and internal networks/SFTP PKCS 2048 bit or better (e.g.PGP)
+
+Management of network and perimeter security device/SSH or HTTPS(Telnet is prohibited)/ TLS 1.2 or better Wireless networks WPA2/(WEP or WPA is prohibited)/802.1x or with MAC filtering Remote access to the corporate network/VPN Tunnel/IPsec, SSL, TLS 1.2 or better
+
+ITP-10-04
+The purpose of this standard is to define and outline the requirements for protecting and managing NYU Langone Health (“NYULH”) data based on their sensitivity and criticality to ongoing operations and business continuity.
+
+Data Sensitivity Classifications: Protected Information - Any data or electronic information that the Medical Center creates, receives, maintains, or transmits that is subject to any Federal, state or local privacy or security law or regulation. Data stored on G,H, or R drives. Cannot be stored on MCIT cloud drive
+
+Confidential Information - All other non-Public Information not included under the Protected classification. Access to this information should be commensurate with an individual’s functions. Stored on G,H, or R drives/ MCIT Cloud Drives.
+
+Public Information - This information it is intended for public consumption. Data must be stored on Medical Center managed storage such as Network Drives (e.g., G, H or R) MCIT Cloud Drive
+
+Criticality Classifications: Tier 1:
+
+data that takes first priority for recovery after a disaster
+importance to MC operations
+Examples: Epic, PeopleSoft, Mail, etc (full list available in document)
+Recovery: must be labled, RTO: 48hrs, RPO: 24hrs Other (Non-Tier1):
+Examples: Network Shares, Alex, Click
+RTO: Best Effort, RPO: 24 hrs
+ITP-19-01
+The purpose of this document is to provide a copy of the current Appendix III: Data Security Addendum used within Third-Party/Vendor agreements. The following addendum is current as of July 2021.
+
+This Addendum sets forth the terms and conditions pursuant to which Sensitive University Data will be protected by the Selected Firm/Vendor during the term of the Parties' Contract and after its termination.
+
+Information Security. Without limiting Vendor’s obligations under the Agreement, Vendor shall implement and maintain administrative, physical and technical safeguards necessary to secure its computers, applications, IT infrastructure, premises and Customer Data that are no less rigorous than as required herein below.
+
+Security Assessments / Audits
+
+(a) Each calendar year and upon Customer’s reasonable request, Vendor will engage at its cost and expense a nationally recognized accounting firm to conduct an audit in accordance with SSAE 16 (or any newer updates) developed by the Auditing Standards Board (ASB) of the American Institute of Certified Public Accountants (AICPA) and have such accounting firm issue a SOC 2Type II Service Auditor’s Report (or substantially similar report in the event the SSAE 16 auditing standard or a Type II Service Auditors Report are no longer an industry standard) which will cover, at a minimum, security policies and procedures and controls of Vendor’s corporate environment including system security and physical security (the “Security Audit”). Vendor will provide Customer with a copy of the Security Audit promptly upon receipt by Vendor.
+
+(b) Upon request, Vendor will respond to Customer’s information security questionnaire (“Security Questionnaire”) which is designed to allow Customer to assess the status of Vendor’s information security policies and procedures and controls including the handling of personally-identifiable information, electronic and physical security and business continuity planning, operational security and access controls, business practices and information technology environment related to remote IT services. Customer may conduct follow-up inquires in connection with the Security Questionnaire. Customer’s right to have Vendor answer Customer’s Security Questionnaire and conduct follow-up interviews will not in any way diminish or affect Vendor’s duties and liabilities under this Agreement.
+
+(c) Vendor will promptly address any deficiencies, concerns or recommendations arising out of any Security Audit or Security Questionnaire.
+
+(d) If, as a result of any Security Audit or Security Questionnaire, Customer is not satisfied with Vendor’s security measures, then, within three (3) business days after the date Customer raises its security concerns, a senior Vendor technology executive will promptly meet with a representative of Customer to discuss the matter. If the Security Audit in its final and issued version contains a qualified opinion relating to security matters including risks to Vendor’s computer systems and physical facilities which could result in the unauthorized destruction, loss, alteration of or access to Customer Data, or the Services being materially affected, then, within five (5) business days after Vendor’s receipt of the audit report, Vendor will, at its own expense, promptly take actions to address the matters raised by the qualification so that the cause of the qualified opinion may be resolved and, after consultation with Customer, reduce any risk to Customer Data.
+
+(e) If Vendor fails to comply with Subsection (d) above, Vendor will: (i) promptly perform a root cause analysis to identify the cause of the failure; (ii) provide to Customer for its approval Vendor’s plan for remedying such failure; and (iii) upon Customer’s approval, implement the plan and remedy the failure. Without limitation of the foregoing, if Vendor fails to take the actions set forth in Subsection (d) within thirty (30) days after the date set forth for such actions, Customer may terminate this Agreement in whole or part without any cure period nor penalty.
+
+Security Incident
+Data Maintenance: vendor must maintain secure data storage, incl encryption, backup, recovery based on NYU+NIST standards
+Application Code Assessment: vendor will review current+future code and provide NYU results of the review (up to but no more than 2x per year). identified vulnerabilities must be remediated wthin 30 days
+Integration with Customer Security Tools: vendor shall integrate with NYU's security framework, incl authorization and SIEM systems
+New Releases
+Patches: vendor will create+install patches on NYU systems within 7 days of release. NYU may request security assessments or app code assessments of any patches before deploying
+AV and Encryption Software: vendor must insatll AV/Anti-malware software on servers that store NYU data. vendor must regularly update the software and use encryption on all related endpoints
